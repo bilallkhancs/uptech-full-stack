@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User Management</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-8">
+
+<h1 class="text-3xl font-bold mb-6 text-center">User Management System</h1>
+
+<!-- Search -->
+<div class="mb-4">
+<input id="searchInput" type="text" placeholder="Search users..."
+class="border p-2 w-full rounded"/>
+</div>
+
+<!-- Add User Form -->
+<form id="userForm" class="bg-white p-4 rounded shadow mb-6">
+
+<div class="grid grid-cols-2 gap-4">
+
+<input id="firstName" type="text" placeholder="First Name"
+class="border p-2 rounded" required>
+
+<input id="lastName" type="text" placeholder="Last Name"
+class="border p-2 rounded" required>
+
+<input id="email" type="email" placeholder="Email"
+class="border p-2 rounded" required>
+
+<input id="phone" type="text" placeholder="Phone"
+class="border p-2 rounded" required>
+
+</div>
+
+<button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">
+Add User
+</button>
+
+</form>
+
+<!-- Loading -->
+<div id="loading" class="text-center hidden">
+Loading...
+</div>
+
+<!-- Users Table -->
+<table class="min-w-full bg-white shadow rounded">
+
+<thead class="bg-gray-200">
+<tr>
+<th class="p-2">ID</th>
+<th class="p-2">First Name</th>
+<th class="p-2">Last Name</th>
+<th class="p-2">Email</th>
+<th class="p-2">Phone</th>
+<th class="p-2">Actions</th>
+</tr>
+</thead>
+
+<tbody id="userTable"></tbody>
+
+</table>
+
+<!-- Edit Modal -->
+<div id="editModal"
+class="fixed inset-0 bg-black bg-opacity-40 hidden items-center justify-center">
+
+<div class="bg-white p-6 rounded w-96">
+
+<h2 class="text-xl mb-4">Edit User</h2>
+
+<input id="editFirstName" class="border p-2 w-full mb-2" />
+<input id="editLastName" class="border p-2 w-full mb-2" />
+<input id="editEmail" class="border p-2 w-full mb-2" />
+<input id="editPhone" class="border p-2 w-full mb-4" />
+
+<button id="updateBtn"
+class="bg-green-500 text-white px-4 py-2 rounded">
+Update
+</button>
+
+<button onclick="closeModal()"
+class="bg-gray-400 text-white px-4 py-2 rounded ml-2">
+Cancel
+</button>
+
+</div>
+</div>
+
+<script src="api.js"></script>
+
+</body>
+</html>

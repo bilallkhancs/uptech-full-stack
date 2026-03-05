@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FETCH API TASK</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-purple-200 min-h-screen flex flex-col items-center p-6">
+  <h1 class="text-4xl font-bold text-gray-800 mb-8">FETCH API TASK</h1>
+  <!-- Buttons -->
+  <div class="flex gap-4 mb-6">
+    <button id="fetchBtn" class="btn bg-green-500">Fetch Random</button>
+    <button id="updateBtn" class="btn bg-yellow-500">Update</button>
+    <button id="deleteBtn" class="btn bg-red-500">Delete</button>
+  </div>
+  <!-- Post Card -->
+  <div id="postCard"
+    class="hidden w-full max-w-xl bg-white/80 backdrop-blur shadow-xl rounded-xl p-6 transition-all duration-500 scale-95 opacity-0">
+    <input id="title" class="w-full border p-3 rounded mb-3 font-semibold text-lg focus:ring-2 focus:ring-blue-400" />
+    <textarea id="body" rows="4" class="w-full border p-3 rounded mb-3 focus:ring-2 focus:ring-blue-400"></textarea>
+    <p id="postId" class="text-sm text-gray-600"></p>
+  </div>
+  <!-- Toast -->
+  <div id="toast" class="fixed top-5 right-5 hidden px-6 py-3 rounded shadow-lg text-white transition-all duration-300">
+  </div>
+  <!-- Link JS File -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DIV FORM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background: white;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 350px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        .gender {
+            display: flex;
+            gap: 15px;
+        }
+
+        .phone-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .phone-group select {
+            width: 30%;
+        }
+
+        .phone-group input {
+            width: 70%;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background: #4facfe;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #00c6ff;
+        }
+    </style>
+</head>
+
+<body>
+
+<form>
+    <div class="form-group">
+        <label>Name:</label>
+        <input type="text" placeholder="Name">
+    </div>
+
+    <div class="form-group">
+        <label>Password:</label>
+        <input type="password" placeholder="Password">
+    </div>
+
+    <div class="form-group">
+        <label>Email:</label>
+        <input type="email" placeholder="abc@mail.com">
+    </div>
+
+    <div class="form-group">
+        <label>Gender:</label>
+        <div class="gender">
+            <label><input type="radio" name="gender"> Male</label>
+            <label><input type="radio" name="gender"> Female</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Phone Number:</label>
+        <div class="phone-group">
+            <select>
+                <option>0300</option>
+                <option>0301</option>
+                <option>0302</option>
+                <option>0303</option>
+                <option>0304</option>
+                <option>0305</option>
+                <option>0306</option>
+                <option>0307</option>
+                <option>0308</option>
+                <option>0309</option>
+            </select>
+            <input type="number" placeholder="123456789">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Submit">
+    </div>
+</form>
+
+</body>
+</html>
