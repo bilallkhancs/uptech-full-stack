@@ -11,7 +11,7 @@ let products = []
 
 async function getProducts(){
 
-loading.classList.remove("hidden")
+// loading.classList.remove("hidden")
 
 try{
 
